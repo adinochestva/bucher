@@ -4,9 +4,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-
-import com.nothio.rooter.R;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -16,14 +13,16 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.nothio.bucher.R;
+
 public class DatabaseInitializer extends SQLiteOpenHelper{
 	
-    private static String DB_PATH = "/data/data/com.nothio.rooter/databases/";
+    private static String DB_PATH = "/data/data/com.nothio.bucher/databases/";
     private static String DB_NAME = "section.db";
  
     private SQLiteDatabase database; 
     private final Context context;
-    private boolean ForceCopy = false;
+    private boolean ForceCopy = true;
     
     
     public DatabaseInitializer(Context context) {

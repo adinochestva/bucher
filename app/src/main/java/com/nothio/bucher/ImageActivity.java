@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 import com.j256.ormlite.dao.Dao;
-import com.nothio.data.DatabaseHelper;
-import com.nothio.model.Section;
-import com.nothio.util.SectionAdapter;
-import com.polites.android.GestureImageView;
+import com.nothio.bucher.data.DatabaseHelper;
+import com.nothio.bucher.model.Section;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -30,9 +28,9 @@ public class ImageActivity extends OrmLiteBaseActivity<DatabaseHelper> {
 
 		String img = getIntent().getStringExtra("img");
 
-		GestureImageView image = (GestureImageView) findViewById(R.id.image);
-		image.setImageResource(getResources().getIdentifier(img, "drawable",
-				getPackageName()));
+//		GestureImageView image = (GestureImageView) findViewById(R.id.image);
+//		image.setImageResource(getResources().getIdentifier(img, "drawable",
+//				getPackageName()));
 	}
 
 	@Override

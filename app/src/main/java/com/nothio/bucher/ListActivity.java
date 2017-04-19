@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 import com.j256.ormlite.dao.Dao;
-import com.nothio.data.DatabaseHelper;
-import com.nothio.model.Section;
-import com.nothio.util.SectionAdapter;
+import com.nothio.bucher.data.DatabaseHelper;
+import com.nothio.bucher.model.Section;
+import com.nothio.bucher.util.SectionAdapter;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;

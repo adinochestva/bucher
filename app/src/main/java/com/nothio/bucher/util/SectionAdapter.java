@@ -2,6 +2,7 @@ package com.nothio.bucher.util;
 
 import java.util.List;
 
+import android.animation.ObjectAnimator;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
@@ -27,12 +28,11 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.nothio.model.Section;
-import com.nothio.rooter.DetailActivity;
-import com.nothio.rooter.ListActivity;
-import com.nothio.rooter.R;
-import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.animation.Animator;
+
+import com.nothio.bucher.DetailActivity;
+import com.nothio.bucher.ListActivity;
+import com.nothio.bucher.R;
+import com.nothio.bucher.model.Section;
 
 public class SectionAdapter extends ArrayAdapter<Section> {
 	List<Section> nodes;
@@ -93,8 +93,8 @@ public class SectionAdapter extends ArrayAdapter<Section> {
 			holder.lable.setLayoutParams(params);
 		}
 		holder.GridItem.setCardBackgroundColor(Color.parseColor("#F5F5F5"));
-		holder.GridItem.setForeground(getContext().getResources().getDrawable(
-				R.color.griditem_white_selector));
+//		holder.GridItem.setForeground(getContext().getResources().getDrawable(
+//				R.color.griditem_white_selector));
 		holder.GridItem.setOnClickListener(new OnClickListener() {
 
 			@Override

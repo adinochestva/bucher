@@ -13,8 +13,9 @@ import java.util.regex.Pattern;
 import javax.xml.datatype.Duration;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.GenericRawResults;
-import com.nothio.data.DatabaseHelper;
-import com.nothio.model.Section;
+import com.nothio.bucher.data.DatabaseHelper;
+import com.nothio.bucher.model.Section;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Application;

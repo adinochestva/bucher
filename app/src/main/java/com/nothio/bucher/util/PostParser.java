@@ -8,10 +8,6 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.nothio.rooter.ImageActivity;
-import com.nothio.rooter.MyApp;
-import com.nothio.rooter.R;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -33,6 +29,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.nothio.bucher.ImageActivity;
+import com.nothio.bucher.MyApp;
+import com.nothio.bucher.R;
 
 public class PostParser {
 	private MyApp appState;
