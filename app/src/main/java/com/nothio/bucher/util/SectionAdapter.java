@@ -1,7 +1,9 @@
 package com.nothio.bucher.util;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import android.Manifest;
 import android.animation.ObjectAnimator;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,7 +15,9 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -30,108 +34,116 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.nothio.bucher.DetailActivity;
-import com.nothio.bucher.ListActivity;
+import com.nothio.bucher.MainActivity;
+import com.nothio.bucher.MyApp;
 import com.nothio.bucher.R;
 import com.nothio.bucher.model.Section;
 
-public class SectionAdapter extends ArrayAdapter<Section> {
-	List<Section> nodes;
-	int resourceDrawable;
-	public int lastPosition = -1;
-	public Boolean gotAnimation = false;
+public class SectionAdapter extends RecyclerView.Adapter<SectionAdapter.ViewHolder> {
+    private Context context;
+    List<Section> nodes;
+    public MyApp appState;
 
-	// public DrawableManager dmanager;
-	// public ImageLoader imgloader;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        // each data item is just a string in this case
+        public TextView lable;
+        public ImageView img;
+        public CardView GridItem;
 
-	public SectionAdapter(Context cnt, List<Section> nz) {
-		super(cnt, R.layout.section_row, nz);
-		resourceDrawable = R.layout.section_row;
-		nodes = nz;
-		// dmanager = new DrawableManager(a);
-		// imgloader = new ImageLoader(a, true);
-	}
+        public ViewHolder(View v) {
+            super(v);
 
-	public static class ViewHolder {
-		TextView lable;
-		ImageView img;
-		CardView GridItem;
-	}
+            lable = (TextView) v.findViewById(R.id.lable);
+            img = (ImageView) v.findViewById(R.id.img);
+            GridItem = (CardView) v.findViewById(R.id.GridItem);
 
-	@Override
-	public View getView(final int position, View convertView, ViewGroup parent) {
+        }
+    }
 
-		View v = convertView;
-		final ViewHolder holder;
-		// if (v == null) {
-		LayoutInflater vi = (LayoutInflater) getContext().getSystemService(
-				Context.LAYOUT_INFLATER_SERVICE);
-		v = vi.inflate(resourceDrawable, null);
-		holder = new ViewHolder();
-		holder.lable = (TextView) v.findViewById(R.id.lable);
-		holder.img = (ImageView) v.findViewById(R.id.img);
-		// holder.up = (ImageView) v.findViewById(R.id.vote_up);
-		// holder.down = (ImageView) v.findViewById(R.id.vote_down);
-		holder.GridItem = (CardView) v.findViewById(R.id.GridItem);
 
-		// v.setTag(holder);
-		// } else
-		// holder = (ViewHolder) v.getTag();
+    // Create new views (invoked by the layout manager)
+    @Override
+    public SectionAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+                                                        int viewType) {
+        View v;
 
-		final Section tweet = nodes.get(position);
-		holder.lable.setText(tweet.name);
+        // create a new view
+        v = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.section_row, parent, false);
+        // set the view's size, margins, paddings and layout parameters
 
-		if (!tweet.getImg().trim().equalsIgnoreCase(""))
-			holder.img.setImageResource(getContext().getResources()
-					.getIdentifier(tweet.img, "drawable",
-							getContext().getPackageName()));
-		else {
-			holder.img.setVisibility(View.GONE);
-			RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) holder.lable
-					.getLayoutParams();
-			params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-			params.setMargins(5, 5, 5, 5);
-			holder.lable.setLayoutParams(params);
-		}
-		holder.GridItem.setCardBackgroundColor(Color.parseColor("#F5F5F5"));
+
+        ViewHolder vh = new ViewHolder(v);
+        return vh;
+    }
+
+    // Replace the contents of a view (invoked by the layout manager)
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        // - get element from your dataset at this position
+        // - replace the contents of the view with that element
+        final Section tweet = nodes.get(position);
+        holder.lable.setText(tweet.name);
+
+        if (tweet.img != null && !tweet.img.trim().equalsIgnoreCase("")) {
+            holder.img.setImageResource(context.getResources()
+                    .getIdentifier(tweet.img, "drawable",
+                            context.getPackageName()));
+            holder.img.setVisibility(View.VISIBLE);
+        } else {
+            holder.img.setVisibility(View.GONE);
+            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) holder.lable
+                    .getLayoutParams();
+            params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+            params.setMargins(5, 5, 5, 5);
+            holder.lable.setLayoutParams(params);
+        }
+        holder.GridItem.setCardBackgroundColor(Color.parseColor("#F5F5F5"));
 //		holder.GridItem.setForeground(getContext().getResources().getDrawable(
 //				R.color.griditem_white_selector));
-		holder.GridItem.setOnClickListener(new OnClickListener() {
+        holder.GridItem.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View arg0) {
-				if (tweet.getDescr().trim().startsWith("call-")) {
+            @Override
+            public void onClick(View arg0) {
+                if (tweet.descr != null && tweet.descr.trim().startsWith("call-")) {
 
-					String url = "tel:"
-							+ tweet.descr.trim().replace("call-", "")
-									.replace("#", Uri.encode("#"));
+                    appState.temp = "tel:"
+                            + tweet.descr.trim().replace("call-", "")
+                            .replace("#", Uri.encode("#"));
 
-					Intent intent = new Intent("android.intent.action.CALL",
-							Uri.parse(url));
+                    ArrayList<String> requiredPermission = new ArrayList<String>() {{
+                        add(Manifest.permission.CALL_PHONE);
+                    }};
 
-					getContext().startActivity(intent);
-				} else if (!tweet.getDescr().trim().equalsIgnoreCase("")) {
-					Intent i = new Intent(getContext(), DetailActivity.class);
-					i.putExtra("id", tweet.id);
-					getContext().startActivity(i);
-				} else {
-					Intent i = new Intent(getContext(), ListActivity.class);
-					i.putExtra("id", tweet.id);
-					getContext().startActivity(i);
-				}
-			}
-		});
+                    if (((MainActivity) context).gotPermission(requiredPermission, 1))
+                        ((MainActivity) context).Call();
 
-		if (position == (lastPosition + 1)) {
-			ObjectAnimator
-					.ofFloat(v, "translationY",
-							parent.getMeasuredHeight() >> 1, 0)
-					.setDuration(300).start();
-		}
+                } else if (tweet.descr != null && !tweet.descr.trim().equalsIgnoreCase("")) {
+                    Intent i = new Intent(context, DetailActivity.class);
+                    i.putExtra("id", tweet.id);
+                    context.startActivity(i);
+                } else {
+                    Intent i = new Intent(context, MainActivity.class);
+                    i.putExtra("id", tweet.id);
+                    context.startActivity(i);
+                }
+            }
+        });
 
-		if (position > lastPosition)
-			lastPosition = position;
+    }
 
-		return v;
-	}
+    // Return the size of your dataset (invoked by the layout manager)
+    @Override
+    public int getItemCount() {
+        return nodes.size();
+    }
+
+
+    public SectionAdapter(Context cnt, MyApp appState, List<Section> nz) {
+        this.appState = appState;
+        context = cnt;
+        nodes = nz;
+    }
+
 
 }

@@ -3,9 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="SectionLabel">#FF4081</color>
+    <color name="SectionLabel">#303F9F</color>
     <color name="SectionHeader">#757575</color>
-    <color name="Detail">#FF4081</color>
+    <color name="Detail">#333333</color>
     <color name="Background">#eeeeee</color>
 
 </resources>

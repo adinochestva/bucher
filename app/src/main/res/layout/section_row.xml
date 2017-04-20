@@ -2,18 +2,19 @@
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/GridItem"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:clickable="true"
         android:focusable="false"
+        android:foreground="@drawable/item_foreground"
         android:isIndicator="true"
-        card_view:cardBackgroundColor="#FFFFFF"
+        card_view:cardBackgroundColor="#fbfbfb"
         card_view:cardElevation="3dp"
         card_view:cardUseCompatPadding="true">
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
             android:gravity="center_horizontal"
             android:orientation="vertical">
@@ -25,11 +26,12 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_margin="5dp"
-                android:scaleType="fitCenter"></ImageView>
+                android:scaleType="fitCenter"
+                android:visibility="gone"></ImageView>
 
             <TextView
                 android:id="@+id/lable"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginBottom="5dp"

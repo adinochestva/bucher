@@ -46,7 +46,7 @@ public class DetailActivity extends OrmLiteBaseActivity<DatabaseHelper> {
 
 		lable.setText(section.name);
 
-		if (!section.getImg().trim().equalsIgnoreCase(""))
+		if (!section.img.trim().equalsIgnoreCase(""))
 			img.setImageResource(getResources().getIdentifier(section.img,
 					"drawable", getPackageName()));
 		else {

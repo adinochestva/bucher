@@ -22,7 +22,6 @@
         </activity>
         <activity android:name=".DetailActivity" />
         <activity android:name=".ImageActivity" />
-        <activity android:name=".ListActivity" />
     </application>
 
 </manifest>
