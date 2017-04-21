@@ -12,12 +12,102 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\sadegh\.gradle\caches\modules-2\files-2.1\com.android.databinding\baseLibrary\2.2.3\b4b51d1925cdfda98fd861230c1ecb5855500129\baseLibrary-2.2.3.jar"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_ead0654b4724ebb5428fa94c75715ba895866b79.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.0.1_dda5e6ec39eb5c56f8bb993acab913338baa43f5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\libs\ormlite-core-5.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="b4b51d1925cdfda98fd861230c1ecb5855500129">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\baseLibrary-2.2.3_e45e8a6999b76d16fd5ee10f87df0c24d6da8a3c.jar" />
+        sha1="03382b8260646dd334a1b9c1b3d412fcb73d8b21">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\ormlite-core-5.0_64db997807dcedcb6c42381180690464b39ba665.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha8\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0e753ea8d0a2dea270da7d96a7d6e9d2e9c10f94">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support.constraint-constraint-layout-1.0.0-alpha8_56da7b47d682ba8f5ac9b8da66c17b1dbe7c6a66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_641636e99b31ef485cd35663f978ee250ed2b959.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.0.1_0db1857f1506b32643cbdf41fb47183fec2724ef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.0.1_0c29ee86d77433e4ef0b28edea41753de2087989.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.0.1_30e336400d2dffd6c1a12262edfc45c46c61ed27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.0.1_08b35ccfb124829ff0c2bf146b36976c0e5e7123.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\libs\ormlite-android-5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="01f065373aeef355dd9e2fd9854efd5ed4d54f6d">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\ormlite-android-5.0_61522823b60821f99fe8384ba3cd0de13c39da22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_85a1b2a4aa3ed507a68d02d67e0a8a83c2c41ffa.jar" />
     </item>
     <item
         is-multidex="false"
@@ -36,15 +126,6 @@
         revision="25.0.0"
         sha1="03382b8260646dd334a1b9c1b3d412fcb73d8b21">
         <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\ormlite-core-5.0_64db997807dcedcb6c42381180690464b39ba665.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\.gradle\caches\modules-2\files-2.1\com.android.databinding\baseLibrary\2.2.3\b4b51d1925cdfda98fd861230c1ecb5855500129\baseLibrary-2.2.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b4b51d1925cdfda98fd861230c1ecb5855500129">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\baseLibrary-2.2.3_e45e8a6999b76d16fd5ee10f87df0c24d6da8a3c.jar" />
     </item>
     <item
         is-multidex="false"
@@ -93,75 +174,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_ead0654b4724ebb5428fa94c75715ba895866b79.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.databinding\adapters\1.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c56d29136c2257f63f08c29c4e739efb03b06c7d">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.databinding-adapters-1.2.1_11b944d54cece86398a9edb42400e0418261c987.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.0.1_dda5e6ec39eb5c56f8bb993acab913338baa43f5.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
         <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.0.1_ccb24aa453de0bd84a56540734238ead1331193c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\libs\ormlite-core-5.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="03382b8260646dd334a1b9c1b3d412fcb73d8b21">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\ormlite-core-5.0_64db997807dcedcb6c42381180690464b39ba665.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha8\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="0e753ea8d0a2dea270da7d96a7d6e9d2e9c10f94">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support.constraint-constraint-layout-1.0.0-alpha8_56da7b47d682ba8f5ac9b8da66c17b1dbe7c6a66.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.databinding\adapters\1.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c56d29136c2257f63f08c29c4e739efb03b06c7d">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.databinding-adapters-1.2.1_11b944d54cece86398a9edb42400e0418261c987.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_641636e99b31ef485cd35663f978ee250ed2b959.jar" />
     </item>
     <item
         is-multidex="false"
@@ -192,30 +210,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.0.1_0db1857f1506b32643cbdf41fb47183fec2724ef.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="D:\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha8\constraint-layout-solver-1.0.0-alpha8.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="80c371a4fd5e1b77f0e3a25b171356878543ffdd">
         <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.0-alpha8_6d9676dae7ccd96989cf53d9a236cb0cd665becf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.databinding\library\1.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="957dc30b1495f8689271e00d56ab09cc9192df02">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.databinding-library-1.2.1_e3e76ffaa95dba7f93d1dba159a8b1fe5103c716.jar" />
     </item>
     <item
         is-multidex="false"
@@ -237,66 +237,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.databinding\library\1.2.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="957dc30b1495f8689271e00d56ab09cc9192df02">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.databinding-library-1.2.1_e3e76ffaa95dba7f93d1dba159a8b1fe5103c716.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.0.1_0c29ee86d77433e4ef0b28edea41753de2087989.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
         <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.0.1_944cfcbab5160dc4540d22572e4b476b9ba5c207.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.0.1_30e336400d2dffd6c1a12262edfc45c46c61ed27.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.0.1_08b35ccfb124829ff0c2bf146b36976c0e5e7123.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\libs\ormlite-android-5.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="01f065373aeef355dd9e2fd9854efd5ed4d54f6d">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\ormlite-android-5.0_61522823b60821f99fe8384ba3cd0de13c39da22.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_85a1b2a4aa3ed507a68d02d67e0a8a83c2c41ffa.jar" />
     </item>
 
 </items>
