@@ -1,0 +1,24 @@
+@font-face {font-family:'BYekan';src:url(fonts/BYekan.ttf);src:url(fonts/BYekan.otf);font-style:normal;font-weight:normal}
+@font-face {font-family:'BKoodak';src:url(fonts/BKoodak.ttf);src:url(fonts/BKoodak.otf);font-style:normal;font-weight:normal}
+ 
+body{font-family:BKoodak,BYekan;font-size:40px;padding:10px;margin-top:60PX}
+#title{font-size:50px;text-align:center;color:#B3004E}
+#matn{font-size:40px}
+#table{background:#6CC8C7;margin-left:auto;margin-right:auto}
+#img{text-align:center}
+#img img{width:600px;border-radius:50px}
+#sp{color:#0046D3;font-size:45px}
+#abt{}
+#abthead{font-size:50px;margin-right:5px}
+#abt table{display:inline-block;margin:10px;background:#FF7AFA;border-radius:10px}
+#abt table td:nth-child(1){background:#36FF4D;border:none;padding:10px;border-radius:0px 10px 10px 0px}
+#abt table td:nth-child(2){background:#E1FFE5;border:none;padding:10px;border-radius:10px 0px 0px 10px}
+#mavad{}
+#mavadhead{font-size:50px;margin-right:5px}
+#mavad table{display:inline-block;margin:10px;background:#FF7AFA;border-radius:10px}
+#mavad table td:nth-child(1){background:#FFD733;border:none;padding:10px;border-radius:0px 10px 10px 0px}
+#mavad table td:nth-child(2){background:#FFF8DC;border:none;padding:10px;border-radius:10px 0px 0px 10px}
+#pokhthead{margin-bottom:10px;font-size:50px}
+.marahelr{background:#6D52FC;width:70px;text-align:center;height:inherit;border-radius:35px;vertical-align:central}
+.marahell{background:rgba(109,82,252,0.11);height:inherit;margin-bottom:10px;border-radius:10px;padding:10px}
+#pokht{margin-bottom:150px}

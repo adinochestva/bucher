@@ -7,13 +7,16 @@ import com.plazza.app.main.util.PostParser;
 
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class DetailActivity extends OrmLiteBaseActivity<DatabaseHelper> {
@@ -35,27 +38,49 @@ public class DetailActivity extends OrmLiteBaseActivity<DatabaseHelper> {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        ImageView img = (ImageView) findViewById(R.id.img);
-        TextView lable = (TextView) findViewById(R.id.lable);
 
-        lable.setText(section.name);
+        RelativeLayout header = (RelativeLayout) findViewById(R.id.header);
+        ScrollView scroll = (ScrollView) findViewById(R.id.scroll);
+        WebView webvu = (WebView) findViewById(R.id.webvu);
 
-        if (!section.img.trim().equalsIgnoreCase(""))
-            try {
-                img.setImageDrawable(Drawable.createFromStream(getAssets().open(section.img), null));
-            } catch (Exception e) {
+        if (section.descr.equalsIgnoreCase("html")) {
+            header.setVisibility(View.GONE);
+            scroll.setVisibility(View.VISIBLE);
+            webvu.setVisibility(View.VISIBLE);
+
+            webvu.getSettings().setUseWideViewPort(true);
+            webvu.getSettings().setLoadWithOverviewMode(true);
+            webvu.getSettings().setBuiltInZoomControls(true);
+            if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+                webvu.getSettings().setDisplayZoomControls(false);
+            webvu.loadUrl("file:///android_asset/content/" + section.id + ".html");
+        } else {
+            header.setVisibility(View.VISIBLE);
+            scroll.setVisibility(View.VISIBLE);
+            webvu.setVisibility(View.GONE);
+
+            ImageView img = (ImageView) findViewById(R.id.img);
+            TextView lable = (TextView) findViewById(R.id.lable);
+
+            lable.setText(section.name);
+
+            if (!section.img.trim().equalsIgnoreCase(""))
+                try {
+                    img.setImageDrawable(Drawable.createFromStream(getAssets().open(section.img), null));
+                } catch (Exception e) {
+                }
+            else {
+                img.setVisibility(View.GONE);
+                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) lable
+                        .getLayoutParams();
+                params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+                params.setMargins(5, 5, 5, 5);
+                lable.setLayoutParams(params);
             }
-        else {
-            img.setVisibility(View.GONE);
-            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) lable
-                    .getLayoutParams();
-            params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-            params.setMargins(5, 5, 5, 5);
-            lable.setLayoutParams(params);
-        }
 
-        LinearLayout descr = (LinearLayout) findViewById(R.id.descr);
-        pp.showBBCode(descr, section.descr);
+            LinearLayout descr = (LinearLayout) findViewById(R.id.descr);
+            pp.showBBCode(descr, section.descr);
+        }
     }
 
     @Override

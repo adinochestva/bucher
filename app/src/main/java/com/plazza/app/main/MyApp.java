@@ -36,9 +36,9 @@ public class MyApp extends Application {
         }
 
         kodakFont = Typeface.createFromAsset(getApplicationContext()
-                .getAssets(), "naskh.ttf");
+                .getAssets(), "fonts/BKoodak.ttf");
         glyphicon = Typeface.createFromAsset(getApplicationContext()
-                .getAssets(), "glyphicons.ttf");
+                .getAssets(), "fonts/BYekan.ttf");
 
         this.appSharedPrefs = getApplicationContext().getSharedPreferences(
                 APP_SHARED_PREFS, Activity.MODE_PRIVATE);
