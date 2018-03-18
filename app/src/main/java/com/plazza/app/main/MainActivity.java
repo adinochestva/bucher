@@ -64,6 +64,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_base);
 
+
+
         binding.tLeft.setTypeface(util.glyph(MainActivity.this));
         binding.tRight.setTypeface(util.glyph(MainActivity.this));
 
