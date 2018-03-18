@@ -58,7 +58,7 @@ public class MainActivity extends BaseActivity {
     Section section = new Section();
     int id, i;
 
-
+    // it is supposed to be the difference !
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
