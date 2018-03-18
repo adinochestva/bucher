@@ -9,6 +9,7 @@ import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.support.ConnectionSource;
 import com.plazza.app.main.model.Section;
+import com.plazza.app.main.model.Setting;
 
 
 /**
@@ -27,6 +28,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
 	// the DAO object
 	private Dao<Section, Integer> sectionDao = null;
+	private Dao<Setting, Integer> settingDao = null;
 
 	public DatabaseHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -73,6 +75,13 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 			sectionDao = getDao(Section.class);
 		}
 		return sectionDao;
+	}
+
+	public Dao<Setting, Integer> getSettingDao() throws SQLException {
+		if (settingDao == null) {
+			settingDao = getDao(Setting.class);
+		}
+		return settingDao;
 	}
 
 	/**

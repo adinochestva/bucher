@@ -1,0 +1,236 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/mainView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Background">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/actionbar_height"
+                    android:layout_margin="0dp"
+                    android:background="@color/HeaderBack"
+                    android:clipToPadding="false"
+                    app:contentInsetEnd="0dp"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetRight="0dp"
+                    app:contentInsetStart="0dp"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <RelativeLayout
+                        android:id="@+id/actionbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/actionbar_height">
+
+                        <TextView
+                            android:id="@+id/h_t_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/catback_selector"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="\ue003"
+                            android:textColor="@color/Icon"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/headerTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxLines="1"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:scrollHorizontally="true"
+                            android:text="App Header"
+                            android:textColor="@color/HeaderText"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/h_t_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/catback_selector"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="\ue236"
+                            android:textColor="@color/Icon"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+
+
+            </android.support.design.widget.AppBarLayout>
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="50dp">
+
+                    <TextView
+                        android:id="@+id/FontTxt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:padding="5dp"
+                        android:text="@string/setting_Font"
+                        android:textColor="@color/Text"
+                        android:textSize="14sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioFont"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/FontTxt"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radioYekan"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:drawablePadding="1dp"
+                            android:gravity="right|center_vertical"
+                            android:layoutDirection="rtl"
+                            android:text="@string/yekan"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/Text"
+                            android:textSize="12sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioKoodak"
+
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:drawablePadding="1dp"
+                            android:gravity="right|center_vertical"
+                            android:layoutDirection="rtl"
+                            android:text="@string/kodak"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/Text"
+                            android:textSize="12sp" />
+                    </RadioGroup>
+
+
+                    <View
+                        android:id="@+id/sep1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/radioFont"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/DividerColor" />
+
+                    <RelativeLayout
+                        android:id="@+id/FontSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sep1"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:id="@+id/FontSizeTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="@string/setting_Font_Size"
+                            android:textColor="@color/Text"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/FontSizeNr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/FontSizeTxt"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@color/Text"
+                            android:textSize="14sp" />
+
+
+                    </RelativeLayout>
+
+
+                    <SeekBar
+                        android:id="@+id/FontSizeVal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/FontSize"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:max="40" />
+
+                    <View
+                        android:id="@+id/sep2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/FontSizeVal"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/DividerColor" />
+
+                    <Button
+                        android:id="@+id/save_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sep2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/Save" />
+
+                </RelativeLayout>
+            </ScrollView>
+        </android.support.design.widget.CoordinatorLayout>
+
+        <fragment
+            android:id="@+id/navigation_view"
+            android:name="com.plazza.app.main.DrawerFragment"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            app:layout="@layout/fragment_drawer" />
+    </android.support.v4.widget.DrawerLayout>
+</layout>

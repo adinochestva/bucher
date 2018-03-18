@@ -3,6 +3,42 @@
 
     <item
         is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\libs\okio-1.10.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c4b316c469df09d8b5b173def1dfd79881a38310">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\okio-1.10.0_936ce55740ec156cec55698c1c09944c547462bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\libs\retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\retrofit-2.1.0_5716d46aef5c010b0136fb1c2a5150222c02dd7c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\libs\simple-xml-2.7.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="083623424bcfa03bd598e709765bad0816c2375d">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\simple-xml-2.7.1_8747a6bc65949d61f73a7437bbc9ff7e192b2148.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\libs\okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\okhttp-3.4.1_283f79e1d127c5bf44fc2b7a0e2314954021e632.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\libs\ormlite-core-5.0.jar"
         jumboMode="false"
         optimize="true"
@@ -18,6 +54,15 @@
         revision="25.0.0"
         sha1="01f065373aeef355dd9e2fd9854efd5ed4d54f6d">
         <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\ormlite-android-5.0_61522823b60821f99fe8384ba3cd0de13c39da22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sadegh\AndroidStudioProjects\bucher\app\libs\glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="C:\Users\sadegh\AndroidStudioProjects\bucher\app\build\intermediates\pre-dexed\debug\glide-3.7.0_0649954ef425439922c652d3f2f1b25aef07a0f5.jar" />
     </item>
 
 </items>

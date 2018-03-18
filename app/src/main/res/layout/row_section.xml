@@ -1,0 +1,46 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/GridItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:focusable="false"
+    android:foreground="@drawable/item_foreground"
+    android:isIndicator="true"
+    card_view:cardBackgroundColor="@color/ListBackground"
+    card_view:cardElevation="3dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:scaleType="fitCenter"
+            android:visibility="gone"></ImageView>
+
+        <TextView
+            android:id="@+id/lable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/img"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:textColor="@color/ListLabel"
+            android:textSize="20sp"></TextView>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

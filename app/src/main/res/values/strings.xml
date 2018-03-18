@@ -3,5 +3,18 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="Error_NoPermission">به دلیل عدم تایید دسترسی انجام عملیات ممکن نیست !</string>
+    <string name="Error_ServerFailed">دسترسی به سرور ممکن نیست ، لطفا دوباره تلاش کنید.</string>
+    <string name="Error_MinimumLength10">حداقل طول 10 کاراکتر می باشد</string>
+    <string name="Error_EmailApp">لطفا یک برنامه ارسال ایمیل نصب کنید.</string>
+    <string name="email">پست‌الکترونیکی</string>
+    <string name="Send">ارسال</string>
+    <string name="search_hint">جست‌و‌جو</string>
+    <string name="searching">جست‌و‌جوی</string>
+    <string name="setting">تنظیمات</string>
+    <string name="setting_Font">فونت :</string>
+    <string name="setting_Font_Size">سایز فونت :</string>
+    <string name="yekan">یکان</string>
+    <string name="kodak">کودک</string>
+    <string name="Save">ذخیره</string>
 
 </resources>

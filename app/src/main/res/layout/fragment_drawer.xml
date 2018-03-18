@@ -1,0 +1,28 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/MenuDrawerBack"
+        tools:context="com.nothio.plazza.activity.DrawerFragment">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/MenuDrawerBack"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="3dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>
+</layout>

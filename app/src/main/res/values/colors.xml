@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="SectionLabel">#303F9F</color>
-    <color name="SectionHeader">#757575</color>
-    <color name="Detail">#333333</color>
-    <color name="Background">#eeeeee</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#ffffff</color>
+
+    <color name="ListLabel">#ffffff</color>
+    <color name="ListBackground">#ffffff</color>
+    <color name="ListBackgroundPressed">#ffffff</color>
+    <color name="Background">#ffffff</color>
+    <color name="MenuDrawerBack">#ffffff</color>
+    <color name="HeaderText">#ffffff</color>
+    <color name="HeaderBack">#ffffff</color>
+    <color name="MenuLabel">#ffffff</color>
+    <color name="MenuLabelPressed">#50ffffff</color>
+    <color name="Text">#ffffff</color>
+    <color name="Icon">#ffffff</color>
+
+
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <!--<color name="ListLabel">#303F9F</color>-->
+    <!--<color name="ListBackground">#757575</color>-->
+    <!--<color name="ListBackgroundPressed">#333333</color>-->
+    <!--<color name="Background">#eeeeee</color>-->
+    <!--<color name="MenuDrawerBack">#eeeeee</color>-->
+    <!--<color name="HeaderText">#FF4081</color>-->
+    <!--<color name="HeaderBack">#757575</color>-->
+    <!--<color name="MenuLabel">#303F9F</color>-->
+    <!--<color name="MenuLabelPressed">#50c7c7c7</color>-->
+    <!--<color name="Text">#333333</color>-->
+    <!--<color name="Icon">#303F9F</color>-->
+    <color name="DividerColor">#e1e1e1</color>
 
 </resources>

@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import com.j256.ormlite.dao.Dao;
 import com.plazza.app.main.data.DatabaseHelper;
 import com.plazza.app.main.model.Section;
+import com.plazza.app.main.model.Setting;
 
 import android.app.Activity;
 import android.app.Application;
@@ -17,8 +18,10 @@ public class MyApp extends Application {
     private SharedPreferences appSharedPrefs;
     private Editor prefsEditor;
     public String temp = "";
+    public Boolean menu = true;
     public volatile Dao<Section, Integer> sectionDao;
-    public volatile Typeface kodakFont, glyphicon;
+    public volatile Dao<Setting, Integer> settingDao;
+
 
     @Override
     public void onCreate() {
@@ -29,16 +32,13 @@ public class MyApp extends Application {
         try {
             this.sectionDao = new DatabaseHelper(getApplicationContext())
                     .getSectionDao();
+            this.settingDao = new DatabaseHelper(getApplicationContext())
+                    .getSettingDao();
 
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-        kodakFont = Typeface.createFromAsset(getApplicationContext()
-                .getAssets(), "fonts/BKoodak.ttf");
-        glyphicon = Typeface.createFromAsset(getApplicationContext()
-                .getAssets(), "fonts/BYekan.ttf");
 
         this.appSharedPrefs = getApplicationContext().getSharedPreferences(
                 APP_SHARED_PREFS, Activity.MODE_PRIVATE);
@@ -48,7 +48,6 @@ public class MyApp extends Application {
         if (!getPref("preversion", "0").equalsIgnoreCase(BuildConfig.VERSION_CODE + "")) {
             // upgraded
             prefClear();
-            setFontSize(15);
         }
 
         setPref("preversion", BuildConfig.VERSION_CODE + "");
@@ -56,13 +55,6 @@ public class MyApp extends Application {
 
     }
 
-    public int getFontSize() {
-        return getPrefInt("fontsize");
-    }
-
-    public void setFontSize(int fontSize) {
-        setPref("fontsize", fontSize);
-    }
 
     // Pref
     public String getPref(String key, String def) {
@@ -99,6 +91,45 @@ public class MyApp extends Application {
     public void setPref(String key, int text) {
         prefsEditor.putInt(key, text);
         prefsEditor.commit();
+    }
+
+
+    public boolean getSettingBool(String name) {
+        try {
+            Setting s = settingDao.queryForEq("name", name).get(0);
+            return s.val.equalsIgnoreCase("1");
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public int getSettingInt(String name) {
+        try {
+            Setting s = settingDao.queryForEq("name", name).get(0);
+            return Integer.parseInt(s.val);
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public String getSetting(String name) {
+        try {
+            Setting s = settingDao.queryForEq("name", name).get(0);
+            return s.val;
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public void setSetting(String name, int val) {
+        try {
+            Setting s = new Setting();
+            s.name = name;
+            s.val = val + "";
+            settingDao.createOrUpdate(s);
+        } catch (Exception e) {
+
+        }
     }
 
 }

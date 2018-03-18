@@ -1,39 +1,40 @@
 package com.plazza.app.main.util;
 
-import java.util.List;
-
-import android.graphics.drawable.Drawable;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.plazza.app.main.MainActivity;
 import com.plazza.app.main.MyApp;
 import com.plazza.app.main.R;
-import com.plazza.app.main.model.Section;
+import com.plazza.app.main.model.FeedItem;
 
-public class SectionAdapter extends RecyclerView.Adapter<SectionAdapter.ViewHolder> {
+import java.util.List;
+
+public class RssAdapter extends RecyclerView.Adapter<RssAdapter.ViewHolder> {
     private Context context;
-    List<Section> nodes;
+    List<FeedItem> nodes;
     public MyApp appState;
+    Boolean openInBrowser;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView lable;
-        public ImageView img;
+        public TextView title;
+        public TextView descr;
         public CardView GridItem;
 
         public ViewHolder(View v) {
             super(v);
 
-            lable = (TextView) v.findViewById(R.id.lable);
-            img = (ImageView) v.findViewById(R.id.img);
+            title = (TextView) v.findViewById(R.id.title);
+            descr = (TextView) v.findViewById(R.id.descr);
             GridItem = (CardView) v.findViewById(R.id.GridItem);
 
         }
@@ -42,13 +43,13 @@ public class SectionAdapter extends RecyclerView.Adapter<SectionAdapter.ViewHold
 
     // Create new views (invoked by the layout manager)
     @Override
-    public SectionAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                        int viewType) {
+    public RssAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+                                                    int viewType) {
         View v;
 
         // create a new view
         v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row_section, parent, false);
+                .inflate(R.layout.row_rss, parent, false);
         // set the view's size, margins, paddings and layout parameters
 
 
@@ -61,32 +62,32 @@ public class SectionAdapter extends RecyclerView.Adapter<SectionAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        final Section tweet = nodes.get(position);
-        holder.lable.setText(tweet.name);
+        final FeedItem tweet = nodes.get(position);
+        holder.title.setText(tweet.getTitle());
+        holder.descr.setText(tweet.getDescription());
 
-        if (tweet.icon != null && !tweet.icon.trim().equalsIgnoreCase("")) {
-            try {
-                holder.img.setImageDrawable(Drawable.createFromStream(context.getAssets().open(tweet.icon), null));
-                holder.img.setVisibility(View.VISIBLE);
-            } catch (Exception e) {
-            }
 
-        } else {
-            holder.img.setVisibility(View.GONE);
-            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) holder.lable
-                    .getLayoutParams();
-            params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-            params.setMargins(5, 5, 5, 5);
-            holder.lable.setLayoutParams(params);
-        }
         holder.GridItem.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
 
-                util.handleCallBack(context, appState, tweet);
+                String url = "";
+                if (!tweet.getLink().trim().startsWith("http://"))
+                    url = "http://";
+                url = url + tweet.getLink().trim();
 
 
+                if (openInBrowser) {
+                    Intent browse = new Intent(Intent.ACTION_VIEW, Uri
+                            .parse(url));
+                    context.startActivity(browse);
+                } else {
+                    Intent i = new Intent(context, MainActivity.class);
+                    i.putExtra("id", -1);
+                    i.putExtra("url", url);
+                    context.startActivity(i);
+                }
             }
         });
 
@@ -99,8 +100,9 @@ public class SectionAdapter extends RecyclerView.Adapter<SectionAdapter.ViewHold
     }
 
 
-    public SectionAdapter(Context cnt, MyApp appState, List<Section> nz) {
+    public RssAdapter(Context cnt, MyApp appState, List<FeedItem> nz, Boolean openInBrowser) {
         this.appState = appState;
+        this.openInBrowser = openInBrowser;
         context = cnt;
         nodes = nz;
     }
